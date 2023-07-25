@@ -32,6 +32,9 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof String){
             return objectMapper.writeValueAsString(Result.success(body));
         }
+        if (body instanceof Result){
+            return body;
+        }
         return Result.success(body);
     }
 }

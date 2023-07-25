@@ -7,8 +7,8 @@ import lombok.Getter;
  */
 @Getter
 public enum ResultCodeEnum {
-    SUCCESS(0,"success"),
-    FAIL(-1, "fail");
+    SUCCESS(200,"success"),
+    FAIL(500, "fail");
     private final int code;
     private final String msg;
 

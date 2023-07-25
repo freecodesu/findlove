@@ -14,4 +14,9 @@ public class TestController {
     public String test(){
         return "success";
     }
+
+    @GetMapping("error")
+    public void error(){
+        throw new RuntimeException("自定义异常");
+    }
 }
